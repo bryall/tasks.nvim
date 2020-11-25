@@ -1,4 +1,4 @@
-local utils = require'mem.utils'
+local utils = require'task.utils'
 local M = {}
 
 local options = {}
@@ -6,7 +6,7 @@ local options = {}
 function M.init()
   require "nvim-treesitter.parsers".get_parser_configs().mem = {
     install_info = {
-      url = "https://github.com/vigoux/tree-sitter-mem",
+      url = "https://github.com/bryall/tree-sitter-task",
       files = {"src/parser.c"}
     }
   }
