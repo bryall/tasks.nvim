@@ -4,7 +4,7 @@ local M = {}
 local options = {}
 
 function M.init()
-  require "nvim-treesitter.parsers".get_parser_configs().mem = {
+  require "nvim-treesitter.parsers".get_parser_configs().task = {
     install_info = {
       url = "https://github.com/bryall/tree-sitter-task",
       files = {"src/parser.c"}
