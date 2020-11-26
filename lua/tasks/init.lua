@@ -1,12 +1,12 @@
-local utils = require'task.utils'
+local utils = require'tasks.utils'
 local M = {}
 
 local options = {}
 
 function M.init()
-  require "nvim-treesitter.parsers".get_parser_configs().task = {
+  require "nvim-treesitter.parsers".get_parser_configs().tasks = {
     install_info = {
-      url = "https://github.com/bryall/tree-sitter-task",
+      url = "https://github.com/bryall/tree-sitter-tasks",
       files = {"src/parser.c"}
     }
   }
@@ -24,7 +24,6 @@ local function edit_file(default_fn)
     end
 
     vim.cmd(string.format("edit " .. file))
-    vim.api.nvim_buf_set_option(0, 'filetype', 'mem')
   end
 end
 
